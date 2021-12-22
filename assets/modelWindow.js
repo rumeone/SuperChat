@@ -6,7 +6,7 @@ const modalWindow = document.querySelector(".modalWindowList");*/
 })*/
 
 const openModalWindow = () => {
-    const onlineList = document.querySelector(".online_list");
+    const onlineList = document.querySelector(".onlineUser");
     const modalWindow = document.querySelector(".modalWindowList");
     if (!onlineList || !modalWindow)
         return;
@@ -17,3 +17,7 @@ const openModalWindow = () => {
 };
 
 openModalWindow();
+
+const addUserToModalWindow = () => {
+    const contentWindow = document.querySelector(".onlineList")
+}
