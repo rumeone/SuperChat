@@ -79,7 +79,7 @@
     color: black;
 }
 
-.online_list {
+.onlineUser {
     display: flex;
     padding-right: 15px;
     justify-content: end;
@@ -99,10 +99,13 @@
     opacity: 0; /* делаем прозрачным */
     position: fixed; /* делаем блок фиксированным */
     top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    display: block;
+    padding-top: 7px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: end;
     background: rgba(18,18,18,0.8); /* фон для затемнения */
     z-index: 9999; /* перекрываем все элементы */
 }
@@ -113,8 +116,15 @@
 }
 
 .onlineList {
-    display: flex;
+    overflow: hidden;
+    display: block;
     background: white;
-    height: 100px;
-    width: 100px;
+    height: 350px;
+    width: 200px;
+    border-radius: 15px;
+}
+
+.textOnline {
+    display: block;
+    text-align: center;
 }

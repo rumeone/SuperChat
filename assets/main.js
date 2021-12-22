@@ -5,7 +5,6 @@ const input = document.querySelector(".input");
 const nameBlock = document.querySelector(".name");
 let userConnect = document.querySelector('.user_connect');
 
-
 const userName = prompt("Введите свой никнейм:");
 nameBlock.innerHTML = userName;
 

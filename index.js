@@ -7,6 +7,8 @@ const io = new Server(server);
 
 const port = 3000;
 
+let arrayUser = [];
+
 app.use(express.static(__dirname));
 
 app.get('/', (request, response ) => {
@@ -22,6 +24,7 @@ io.on('connection', (socket) => {
     });
 
     socket.on('connect user', (userName) => {
+        arrayUser.push(userName);
         io.emit('connect user', {
             name: userName.nameConnect
         })
@@ -35,4 +38,3 @@ io.on('connection', (socket) => {
 server.listen(port, () => {
     console.log(`listening on port ${port}`);
 });
-
