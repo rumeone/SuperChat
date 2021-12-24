@@ -7,8 +7,6 @@ const io = new Server(server);
 
 const port = 3000;
 
-let arrayUser = [];
-
 app.use(express.static(__dirname));
 
 app.get('/', (request, response ) => {
@@ -20,14 +18,16 @@ io.on('connection', (socket) => {
         io.emit('chat message', {
             message: msg.message,
             name: msg.name
-        })
+        });
     });
 
     socket.on('connect user', (userName) => {
-        arrayUser.push(userName);
+        userName.arrayConnect.push(userName.userConnect);
+        console.log(arrayUser);
         io.emit('connect user', {
-            name: userName.nameConnect
-        })
+            name: userName.userConnect,
+            arrayConnect: arrayUser
+        });
     });
 
     socket.on('disconnect', () => {

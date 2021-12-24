@@ -8,6 +8,20 @@ let userConnect = document.querySelector('.user_connect');
 const userName = prompt("Введите свой никнейм:");
 nameBlock.innerHTML = userName;
 
+let arrayUser = [];
+
+socket.emit('connect user', {
+    userConnect: userName,
+    arrayConnect: arrayUser
+});
+
+socket.on('connect user', (userName) => {
+    console.log(userName.arrayConnect);
+    const item = document.createElement('div');
+    item.innerHTML = `Пользователь <b><span class = "user">${userName.name}</span></b> подключился к чату!`
+    userConnect.append(item);
+})
+
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -27,15 +41,6 @@ socket.on('chat message', (msg) => {
     window.scrollTo(0, document.body.scrollHeight);
 })
 
-socket.emit('connect user', {
-    nameConnect: userName
-});
-
-socket.on('connect user', (userName) => {
-    const item = document.createElement('div');
-    item.innerHTML = `Пользователь <b><span class = "user">${userName.name}</span></b> подключился к чату!`
-    userConnect.append(item);
-})
 
 
 
