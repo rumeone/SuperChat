@@ -6,6 +6,8 @@ const {Server} = require('socket.io');
 const io = new Server(server);
 
 const port = 3000;
+let arrayUser = [];
+
 
 app.use(express.static(__dirname));
 
@@ -22,7 +24,7 @@ io.on('connection', (socket) => {
     });
 
     socket.on('connect user', (userName) => {
-        userName.arrayConnect.push(userName.userConnect);
+        arrayUser.push(userName.userConnect);
         console.log(arrayUser);
         io.emit('connect user', {
             name: userName.userConnect,
