@@ -128,3 +128,8 @@
     display: block;
     text-align: center;
 }
+
+.usersList {
+    display: flex;
+    flex-direction: column;
+}

@@ -14,12 +14,17 @@ const openModalWindow = () => {
         e.preventDefault();
         modalWindow.classList.add("modal_active");
     });
+
 };
 
 openModalWindow();
 
 const addUserToModalWindow = () => {
-    const contentWindow = document.querySelector(".onlineList");
-    //contentWindow.innerHTML =
-
+    const contentWindow = document.querySelector(".usersList");
+    socket.on('users', (users) => {
+       users.forEach((item) => {
+           contentWindow.innerHTML += `${item}` + '\n';
+       });
+    });
 }
+addUserToModalWindow();
