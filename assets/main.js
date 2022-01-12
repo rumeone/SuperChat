@@ -5,22 +5,19 @@ const input = document.querySelector(".input");
 const nameBlock = document.querySelector(".name");
 let userConnect = document.querySelector('.user_connect');
 
-const userName = prompt("Введите свой никнейм:");
+const userName = prompt("Enter your name:");
 nameBlock.innerHTML = userName;
 
-let arrayUser = [];
 
 socket.emit('connect user', {
-    userConnect: userName,
-    arrayConnect: arrayUser
+    userConnect: userName, // передаем имя подключенного пользователя
 });
 
 socket.on('connect user', (userName) => {
-    console.log(userName.arrayConnect);
     const item = document.createElement('div');
     item.innerHTML = `Пользователь <b><span class = "user">${userName.name}</span></b> подключился к чату!`
     userConnect.append(item);
-})
+});
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -33,6 +30,7 @@ form.addEventListener('submit', (event) => {
         input.value = "";
     }
 });
+
 
 socket.on('chat message', (msg) => {
     const item = document.createElement('li');

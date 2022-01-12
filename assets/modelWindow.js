@@ -11,13 +11,15 @@ const openModalWindow = () => {
     if (!onlineList || !modalWindow)
         return;
     onlineList.addEventListener("click", (e) => {
-        e.preventDefault()
-        modalWindow.classList.add("modal_active")
-    })
+        e.preventDefault();
+        modalWindow.classList.add("modal_active");
+    });
 };
 
 openModalWindow();
 
 const addUserToModalWindow = () => {
-    const contentWindow = document.querySelector(".onlineList")
+    const contentWindow = document.querySelector(".onlineList");
+    //contentWindow.innerHTML =
+
 }

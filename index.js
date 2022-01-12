@@ -6,7 +6,7 @@ const {Server} = require('socket.io');
 const io = new Server(server);
 
 const port = 3000;
-let arrayUser = [];
+let users = []; // так же создаем массив
 
 
 app.use(express.static(__dirname));
@@ -16,7 +16,7 @@ app.get('/', (request, response ) => {
 });
 
 io.on('connection', (socket) => {
-    socket.on('chat message', (msg) => {
+    socket.on('chat message', (msg) => { // событие "сообщение чата"
         io.emit('chat message', {
             message: msg.message,
             name: msg.name
@@ -24,11 +24,11 @@ io.on('connection', (socket) => {
     });
 
     socket.on('connect user', (userName) => {
-        arrayUser.push(userName.userConnect);
-        console.log(arrayUser);
-        io.emit('connect user', {
+        users.push(userName.userConnect);
+        console.log(users);
+        io.emit("users", users); // событие пользователи
+        io.emit('connect user', { // событие подключенние к сессии
             name: userName.userConnect,
-            arrayConnect: arrayUser
         });
     });
 
