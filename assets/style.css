@@ -115,6 +115,16 @@
     opacity: 1;
 }
 
+.modal_inactive {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.modal_inactive {
+    visibility: hidden;
+    opacity: 0;
+}
+
 .onlineList {
     overflow: hidden;
     display: block;
@@ -135,8 +145,10 @@
 
 .closeButton {
     display: block;
-    position: absolute;
+    position: relative;
+    top: 40px;
+    left: 180px;
     background-image: url(../image/close.svg);
-    height: 40px;
-    width: 40px;
+    height: 45px;
+    width: 45px;
 }

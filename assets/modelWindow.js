@@ -8,7 +8,6 @@ const openModalWindow = () => {
         e.preventDefault();
         modalWindow.classList.add("modal_active");
     });
-
 };
 openModalWindow();
 
@@ -24,4 +23,14 @@ addUserToModalWindow();
 
 const closeModalWindow = () => {
     const modalWindow = document.querySelector(".modalWindowList");
-}
+    const closeWindow = document.querySelector(".closeButton");
+
+    closeWindow.addEventListener("click", (e) => {
+        e.preventDefault();
+            modalWindow.classList.remove("modal_active");
+            console.log(e);
+            e.stopPropagation();
+    })
+};
+
+closeModalWindow();
