@@ -14,9 +14,9 @@ openModalWindow();
 const addUserToModalWindow = () => {
     const contentWindow = document.querySelector(".usersList");
     socket.on('users', (users) => {
-       users.forEach((item) => {
-           contentWindow.innerHTML += `<div>• ${item}</div>`;
-       });
+        for (let user of Object.values(users)) {
+            contentWindow.innerHTML += `<div>• ${user.name}</div>`;
+        }
     });
 };
 addUserToModalWindow();
@@ -27,9 +27,8 @@ const closeModalWindow = () => {
 
     closeWindow.addEventListener("click", (e) => {
         e.preventDefault();
-            modalWindow.classList.remove("modal_active");
-            console.log(e);
-            e.stopPropagation();
+        modalWindow.classList.remove("modal_active");
+        e.stopPropagation();
     })
 };
 

@@ -6,8 +6,9 @@ const {Server} = require('socket.io');
 const io = new Server(server);
 
 const port = 3000;
-let users = []; // так же создаем массив
-
+//let users = []; // так же создаем массив
+let id = 0;
+let users = {};
 
 app.use(express.static(__dirname));
 
@@ -24,15 +25,17 @@ io.on('connection', (socket) => {
     });
 
     socket.on('connect user', (userName) => {
-        users.push(userName.userConnect);
+        //users.push(userName.userConnect);
+        users[id++] = {name: userName.userConnect};
         console.log(users);
-        io.emit("users", users); // событие пользователи
+        io.emit("users", users); // passing the collection
         io.emit('connect user', { // событие подключенние к сессии
             name: userName.userConnect,
         });
     });
 
     socket.on('disconnect', () => {
+
         console.log("a user disconnect");
     });
 })
