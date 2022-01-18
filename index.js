@@ -22,21 +22,23 @@ io.on('connection', (socket) => {
             name: msg.name
         });
     });
-
-    socket.on('connect user', (userName) => {
-        if(users[socket.id] !== undefined)
-            return;
+    if(users[socket.id] !== undefined)
+        return;
+    socket.on('setUserName', (userName) => {
         users[socket.id] = {
             name: userName.userConnect,
             id: id++};
         console.log(users);
         io.emit("users", users);
-        io.emit('connect user', {
+        io.emit('setUserName', {
             name: userName.userConnect,
         });
     });
     socket.on('disconnect', () => {
-        io.emit('rumeone', users);
+        socket.removeAllListeners();
+        users[socket.id] = undefined;
+        delete users[socket.id];
+        io.emit('users', users);
     });
 });
 server.listen(port, () => {

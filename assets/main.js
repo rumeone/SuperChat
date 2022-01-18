@@ -9,11 +9,11 @@ const userName = prompt("Enter your name:");
 nameBlock.innerHTML = userName;
 
 
-socket.emit('connect user', {
+socket.emit('setUserName', {
     userConnect: userName, // передаем имя подключенного пользователя
 });
 
-socket.on('connect user', (userName) => {
+socket.on('setUserName', (userName) => {
     const item = document.createElement('div');
     item.innerHTML = `Пользователь <b><span class = "user">${userName.name}</span></b> подключился к чату!`
     userConnect.append(item);
