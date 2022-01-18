@@ -6,7 +6,6 @@ const {Server} = require('socket.io');
 const io = new Server(server);
 
 const port = 3000;
-//let users = []; // так же создаем массив
 let id = 0;
 let users = {};
 
@@ -25,21 +24,21 @@ io.on('connection', (socket) => {
     });
 
     socket.on('connect user', (userName) => {
-        //users.push(userName.userConnect);
-        users[id++] = {name: userName.userConnect};
+        if(users[socket.id] !== undefined)
+            return;
+        users[socket.id] = {
+            name: userName.userConnect,
+            id: id++};
         console.log(users);
-        io.emit("users", users); // passing the collection
-        io.emit('connect user', { // событие подключенние к сессии
+        io.emit("users", users);
+        io.emit('connect user', {
             name: userName.userConnect,
         });
     });
-
     socket.on('disconnect', () => {
-
-        console.log("a user disconnect");
+        io.emit('rumeone', users);
     });
-})
-
+});
 server.listen(port, () => {
     console.log(`listening on port ${port}`);
 });
