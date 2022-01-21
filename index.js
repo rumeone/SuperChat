@@ -39,6 +39,7 @@ io.on('connection', (socket) => {
         users[socket.id] = undefined;
         delete users[socket.id];
         io.emit('users', users);
+        console.log(users);
     });
 });
 server.listen(port, () => {

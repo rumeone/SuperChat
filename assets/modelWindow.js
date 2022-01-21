@@ -14,6 +14,7 @@ openModalWindow();
 const addUserToModalWindow = () => {
     const contentWindow = document.querySelector(".usersList");
     socket.on('users', (users) => {
+        contentWindow.innerHTML = '';
         for (let user of Object.values(users)) {
             contentWindow.innerHTML += `<div>• ${user.name}</div>`;
         }
