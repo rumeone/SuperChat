@@ -5,9 +5,7 @@ const input = document.querySelector(".input");
 const nameBlock = document.querySelector(".name");
 let userConnect = document.querySelector('.user_connect');
 
-console.log("asa");
-
-/*const userName = prompt("Enter your name:");
+const userName = localStorage.getItem('name');
 nameBlock.innerHTML = userName;
 
 
@@ -32,7 +30,7 @@ form.addEventListener('submit', (event) => {
         })
         input.value = "";
     }
-});*/
+});
 
 
 socket.on('chat message', (msg) => {
