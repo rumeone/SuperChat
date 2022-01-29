@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3f63ef3-82d3-4bdd-a3cc-6d9f7bf89ccf" name="Changes" comment="" />
+    <list default="true" id="c3f63ef3-82d3-4bdd-a3cc-6d9f7bf89ccf" name="Changes" comment="Added processing from the server side of the list of people who entered">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/modelWindow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/style.css" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,11 +19,19 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
         <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -26,6 +40,7 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="21jkOmEpVNzB4vyWHiX3OR9fqez" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -37,6 +52,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="16.13.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="16.11.11" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -53,6 +69,9 @@
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\User\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c3f63ef3-82d3-4bdd-a3cc-6d9f7bf89ccf" name="Changes" comment="" />
@@ -78,11 +97,139 @@
       <workItem from="1639852246343" duration="281000" />
       <workItem from="1640012004334" duration="7656000" />
       <workItem from="1640105951372" duration="3863000" />
-      <workItem from="1640180194904" duration="1830000" />
+      <workItem from="1640180194904" duration="7059000" />
+      <workItem from="1640192827710" duration="4685000" />
+      <workItem from="1640362936593" duration="4549000" />
+      <workItem from="1640612902778" duration="55000" />
+      <workItem from="1640624569336" duration="20000" />
+      <workItem from="1641917196668" duration="7330000" />
+      <workItem from="1641983153558" duration="2389000" />
+      <workItem from="1641987660616" duration="584000" />
+      <workItem from="1642008809766" duration="4906000" />
+      <workItem from="1642067369913" duration="15758000" />
+      <workItem from="1642154123913" duration="2530000" />
+      <workItem from="1642172581951" duration="6832000" />
+      <workItem from="1642180211930" duration="27000" />
+      <workItem from="1642184287701" duration="366000" />
+      <workItem from="1642242890862" duration="3464000" />
+      <workItem from="1642257920618" duration="5785000" />
+      <workItem from="1642345143116" duration="4814000" />
+      <workItem from="1642430160015" duration="413000" />
+      <workItem from="1642430780955" duration="691000" />
+      <workItem from="1642499210971" duration="11946000" />
+      <workItem from="1642698992192" duration="4496000" />
+      <workItem from="1642775158098" duration="1434000" />
+      <workItem from="1642798489778" duration="481000" />
+      <workItem from="1642950906788" duration="1344000" />
+      <workItem from="1642956746691" duration="1268000" />
+      <workItem from="1643218518494" duration="2766000" />
+      <workItem from="1643222245431" duration="788000" />
+      <workItem from="1643301284084" duration="4225000" />
+      <workItem from="1643385300080" duration="5521000" />
+      <workItem from="1643474454195" duration="2342000" />
     </task>
+    <task id="LOCAL-00001" summary="Added tracking of connected users on the server side">
+      <created>1640197272682</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1640197272682</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added client side user tracking">
+      <created>1640367442172</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1640367442172</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added processing from the server side of the list of people who entered">
+      <created>1641924246650</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1641924246650</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added processing from the server side of the list of people who entered">
+      <created>1641924576550</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1641924576550</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added an event for the connected user (I have not developed a disconnect yet)">
+      <created>1642010526532</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1642010526532</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Finally, everything is displayed in a modal window, but for now in a line">
+      <created>1642013142222</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1642013142223</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Getting started with modal closing">
+      <created>1642084251273</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1642084251273</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fully implemented modal window">
+      <created>1642089946612</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1642089946612</updated>
+    </task>
+    <task id="LOCAL-00009" summary="http://localhost:3000">
+      <created>1642265062670</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1642265062670</updated>
+    </task>
+    <task id="LOCAL-00010" summary="We solve a lot of problems with the correct display of users">
+      <created>1642522787381</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1642522787381</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added deleting a user on the server">
+      <created>1642525736666</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1642525736666</updated>
+    </task>
+    <task id="LOCAL-00012" summary="The modal window is fully functional">
+      <created>1642775346553</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1642775346553</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added tracking of connected users on the server side" />
+    <MESSAGE value="Added client side user tracking" />
+    <MESSAGE value="Added processing from the server side of the list of people who entered" />
+    <MESSAGE value="Added an event for the connected user (I have not developed a disconnect yet)" />
+    <MESSAGE value="Finally, everything is displayed in a modal window, but for now in a line" />
+    <MESSAGE value="Getting started with modal closing" />
+    <MESSAGE value="Fully implemented modal window" />
+    <MESSAGE value="http://localhost:3000" />
+    <MESSAGE value="We solve a lot of problems with the correct display of users" />
+    <MESSAGE value="Added deleting a user on the server" />
+    <MESSAGE value="The modal window is fully functional" />
+    <option name="LAST_COMMIT_MESSAGE" value="The modal window is fully functional" />
   </component>
 </project>
