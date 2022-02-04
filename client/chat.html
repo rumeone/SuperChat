@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet"  href="../style/style.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,500;1,400&display=swap" rel="stylesheet">
+    <title>Socket.IO chat</title>
+</head>
+<body>
+<a href = "../index.html">Тык</a>
+<div class="onlineUser">&#9776; Online list
+    <div class = "modalWindowList">
+        <div class = "modalBody">
+            <div class = "closeButton"></div>
+            <div class ="onlineList"><span class = "textOnline">Online</span>
+                <div class = "usersList"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="chat">
+        <ul class="messages"></ul>
+        <div class = "user_connect"></div>
+        <form class = "form" action="">
+            <div class="name"></div>
+            <input type = "text" class = "input" autocomplete="off">
+            <button class="btn">Send</button>
+        </form>
+</div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src = "main.js"></script>
+
+    <script src = "modelWindow.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+.form {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.15);
+    padding: 5px;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+.name {
+    height: 35px;
+    background: beige;
+    padding: 15px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #222;
+    font-size: 14px;
+}
+
+.input {
+    height: 35px;
+    border-radius: 30px;
+    border: none;
+    margin: 5px;
+    padding: 0 25px;
+    width: 100%;
+    outline: none;
+}
+
+.btn {
+    background: #222;
+    border-radius: 5px;
+    border: none;
+    height: 35px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    color: white;
+    cursor: pointer;
+}
+
+.messages {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+.messages > li {
+    padding: 10px;
+}
+.messages > li > span {
+    font-weight: 500;
+}
+.messages > li:nth-child(even) {
+    background: lightgrey;
+}
+
+.user_connect {
+    background: gray;
+    color: white;
+}
+
+.user {
+    color: black;
+}
+
+.onlineUser {
+    display: flex;
+    padding-right: 15px;
+    justify-content: end;
+    border: black;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.chat {
+    display: flex;
+    flex-direction: column;
+}
+
+.modalWindowList {
+    visibility: hidden; /* скрываем модальное окно */
+    opacity: 0; /* делаем прозрачным */
+    position: fixed; /* делаем блок фиксированным */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 7px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: end;
+    background: rgba(18,18,18,0.8); /* фон для затемнения */
+    z-index: 9999; /* перекрываем все элементы */
+}
+
+.modal_active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal_inactive {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.modal_inactive {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.onlineList {
+    overflow: hidden;
+    display: block;
+    background: white;
+    height: 350px;
+    width: 230px;
+    border-radius: 15px;
+}
+
+.textOnline {
+    display: block;
+    text-align: center;
+}
+
+.usersList {
+    margin-left: 10px;
+}
+
+.closeButton {
+    display: block;
+    position: relative;
+    top: 40px;
+    left: 180px;
+    background-image: url(../image/close.svg);
+    height: 45px;
+    width: 45px;
+}
